@@ -49,12 +49,12 @@ struct vector <T, 3>
         return *this;
     }
 
-    Vec3D operator* (T scalar)
+    Vec3D operator * (T scalar)
     {
-        return Vec3D(x * scalar, y * scalar, z * scalar)
+        return Vec3D(x * scalar, y * scalar, z * scalar);
     }
 
-    Vec3D operator*= (T scalar)
+    Vec3D operator *= (T scalar)
     {
         x *= scalar;
         y *= scalar;
@@ -62,7 +62,12 @@ struct vector <T, 3>
         return *this;
     }
 
-    Vec3D operator/= (T scalar)
+    Vec3D operator / (T scalar)
+    {
+        return Vec3D(x / scalar, y / scalar, z / scalar);
+    }
+
+    Vec3D operator /= (T scalar)
     {
         x /= scalar;
         y /= scalar;
@@ -82,7 +87,7 @@ struct vector <T, 3>
 
     friend std::ostream& operator<<(std::ostream& os, const vector<T, 3>& vec)
     {
-        os << "X: " << vec.x << ", Y: " << vec.y << std::endl;
+        os << "X: " << vec.x << ", Y: " << vec.y << ", Z: " << vec.z << std::endl;
         return os;
     }
 
@@ -106,11 +111,16 @@ struct vector <T, 3>
     }
     //This function might go on math helper
     //Calculates the angle between the two vectors
-    static double CalculateAngle(const Vec3D lhs, const Vec3D rhs)
+    double CalculateAngle(const Vec3D& other) const 
     {
-        double dot = DotProduct(lhs, other);
-        double lenProduct = lhs.Length() * other.Length();
+        double dot = DotProduct(*this, other);
+        double lenProduct = Length() * other.Length();
         return acos(dot / lenProduct);
+    }
+    //Returns the length of the vector (Pythagorean formula)
+    float Length()
+    {
+        return sqrt(x * x + y * y + z * z);
     }
 
     //Normalizes the given vector
@@ -121,7 +131,7 @@ struct vector <T, 3>
     }
 
     //Returns the length of the vector (Pythagorean formula)
-    float Length()
+    float Length() const
     {
         return sqrt(x * x + y * y + z * z);
     }

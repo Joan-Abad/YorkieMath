@@ -48,7 +48,7 @@ struct vector <T, 2>
 
     Vec2D operator* (T scalar)
     {
-        return Vec2D(x * scalar, y * scalar)
+        return Vec2D(x * scalar, y * scalar);
     }
 
     Vec2D operator*= (T scalar)
@@ -56,6 +56,11 @@ struct vector <T, 2>
         x *= scalar; 
         y *= scalar;
         return *this; 
+    }
+
+    Vec2D operator / (T scalar)
+    {
+        return Vec2D(x / scalar, y / scalar);
     }
 
     Vec2D operator/= (T scalar)
@@ -101,10 +106,10 @@ struct vector <T, 2>
     }
     //This function might go on math helper
     //Calculates the angle between the two vectors
-    static double CalculateAngle(const Vec2D lhs, const Vec2D rhs)
+    double CalculateAngle(const Vec2D& other) const
     {
-        double dot = DotProduct(lhs, other);
-        double lenProduct = lhs.Length() * other.Length();
+        double dot = DotProduct(*this, other);
+        double lenProduct = Length() * other.Length();
         return acos(dot / lenProduct);
     }
 
@@ -116,7 +121,7 @@ struct vector <T, 2>
     }
 
     //Returns the length of the vector (Pythagorean formula)
-    float Length()
+    float Length() const
     {
         return sqrt(x * x + y * y);
     }
