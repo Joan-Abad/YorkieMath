@@ -1,45 +1,10 @@
 #pragma once
+#include "Implementations/Vector2D.h"
+#include "Implementations/Vector3D.h"
 
-
-
-template<typename T>
-struct Vector2D
-{
-
-	Vector2D(T x, T y) : x(x), y(y) {};
-
-	Vector2D operator + (const Vector2D& lhs, const Vector2D& rhs)
-	{
-		Vector2D returnValue; 
-		returnValue.x = lhs.x + rhs.x;
-		returnValue.x = lhs.y + rhs.y;
-		return returnValue; 
-	}
-
-	Vector2D operator - (const Vector2D& lhs, const Vector2D& rhs)
-	{
-		Vector2D returnValue;
-		returnValue.x = lhs.x - rhs.x;
-		returnValue.x = lhs.y - rhs.y;
-		return returnValue;
-	}
-
-	Vector2D operator -= (const Vector2D& other)
-	{
-		x -= other.x;
-		y -= other.y;
-		return *this;
-	}
-
-	Vector2D operator += (const Vector2D& other)
-	{
-		x += other.x;
-		y += other.y;
-		return *this;
-	}
-
-	T x;
-	T y;
-	
-};
-
+using Vec2 = vector<float, 2>; 
+using Vec3 = vector<float, 3>;
+using Vec2i = vector<int, 2>;
+using Vec3i = vector<int, 3>;
+using Vec2ui = vector<unsigned int, 2>;
+using Vec3ui = vector<unsigned int, 3>;

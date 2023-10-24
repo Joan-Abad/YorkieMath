@@ -112,7 +112,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>E:\Projects\YorkieCollision\YorkieMath\Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -142,7 +142,10 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Public\MathStatics.h" />
     <ClInclude Include="Public\Vector.h" />
+    <ClInclude Include="Public\Implementations\Vector2D.h" />
+    <ClInclude Include="Public\Implementations\Vector3D.h" />
     <ClInclude Include="YorkieMath.h" />
   </ItemGroup>
   <ItemGroup>
