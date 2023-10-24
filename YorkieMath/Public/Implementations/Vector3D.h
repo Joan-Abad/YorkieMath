@@ -109,6 +109,16 @@ struct vector <T, 3>
     {
         return (lhs.x * rhs.x) + (lhs.y * rhs.y) + (lhs.z * rhs.z);
     }
+
+    //Calculates the corss product of two vectors
+    Vec3D CrossProduct(const Vec3D& other) const {
+        double resultX = (y * other.z) - (z * other.y);
+        double resultY = (z * other.x) - (x * other.z);
+        double resultZ = (x * other.y) - (y * other.x);
+
+        return Vec3D(resultX, resultY, resultZ);
+    }
+
     //This function might go on math helper
     //Calculates the angle between the two vectors
     double CalculateAngle(const Vec3D& other) const 
