@@ -141,14 +141,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Public\Line.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Public\MatImplementations\Mat4x4.h" />
-    <ClInclude Include="Public\VecImplementations\Vector4D.h" />
+    <ClInclude Include="Public\LineImp\Line2D.h" />
+    <ClInclude Include="Public\LineImp\Line3D.h" />
+    <ClInclude Include="Public\MatImp\Mat4x4.h" />
+    <ClInclude Include="Public\VecImp\Vector4D.h" />
     <ClInclude Include="Public\MathStatics.h" />
     <ClInclude Include="Public\Matrices.h" />
     <ClInclude Include="Public\Vector.h" />
-    <ClInclude Include="Public\VecImplementations\Vector2D.h" />
-    <ClInclude Include="Public\VecImplementations\Vector3D.h" />
+    <ClInclude Include="Public\VecImp\Vector2D.h" />
+    <ClInclude Include="Public\VecImp\Vector3D.h" />
     <ClInclude Include="YorkieMath.h" />
   </ItemGroup>
   <ItemGroup>
@@ -159,7 +162,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Private\Vector.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

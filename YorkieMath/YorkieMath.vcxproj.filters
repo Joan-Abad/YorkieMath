@@ -21,7 +21,7 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\VecImplementations\Vector2D.h">
+    <ClInclude Include="Public\VecImp\Vector2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="YorkieMath.h">
@@ -30,7 +30,7 @@
     <ClInclude Include="Public\Vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\VecImplementations\Vector3D.h">
+    <ClInclude Include="Public\VecImp\Vector3D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Public\MathStatics.h">
@@ -39,10 +39,19 @@
     <ClInclude Include="Public\Matrices.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\VecImplementations\Vector4D.h">
+    <ClInclude Include="Public\VecImp\Vector4D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Public\MatImplementations\Mat4x4.h">
+    <ClInclude Include="Public\MatImp\Mat4x4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\Line.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\LineImp\Line3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\LineImp\Line2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -51,9 +60,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Private\Vector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
